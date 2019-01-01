@@ -1,0 +1,209 @@
+body{
+	margin: 0;
+	font-weight: bold;
+	background: url("http://www.bestcoaching.com.mx/cartas/wp-content/uploads/2016/01/black-background-92475.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+h1{
+	color: white;
+}
+.navbar.navbar-expand-lg{
+	background-color: black;
+}
+.navbar-nav{
+	margin: auto;
+	padding-right: 320px;
+}
+.nav-item a{
+	font-weight: bold;
+	size: 30px;
+	color: white;
+}
+#container{
+	width: 480px;
+	height: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+.captcha-image{
+	height: 144px;
+    width: 144px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    float: left;
+    opacity: 1.0;
+    background: url("Capture10.png");
+    background-size: 100% 100%;
+}
+img:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+#instruction-text{
+	padding-top: 20px;
+	padding-bottom: 0;
+	font-family: "Avant Garde Gothic";
+	font-weight: bold;
+	text-align: center;
+	font-size: 150%;
+	text-transform: uppercase;
+}
+.bottom{
+	margin: auto; 
+	text-align: center;
+}
+.timer{
+	text-align: center;
+	margin: auto;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+#info{
+	color: grey;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.drawingResult{
+  text-align: center;
+  margin: auto;
+}
+
+/*animation*/
+@import "compass/css3";
+
+/* -------------------
+ Loader CSS
+------------------- */
+.circular{
+ height: 200px;
+ width: 200px; 
+}
+
+
+.path {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  animation: dash 2s infinite;
+  stroke-linecap: round;
+  stroke: white;
+}
+
+
+@keyframes dash{
+
+  0%, 50% { transition-timing-function: ease-out; }
+  75%, 100% { transition-timing-function: ease-in;}
+  
+  0%{
+    stroke-dasharray: 1,600;
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+  50%{
+    stroke-dasharray: 600,600;
+    stroke-dashoffset: 0;
+    opacity:1;
+  }
+  75%{
+    opacity: 1;
+  }
+  100%{
+    stroke-dasharray: 700,600;
+    stroke-dashoffset: -600;
+    opacity: 0;
+  }
+}
+
+@keyframes numberscale{
+  0%,10% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  25%,50%{
+    opacity: 1;
+  }
+  90%,100% {
+    transform: scale(0.75);
+    opacity:0;
+  }
+}
+
+.countdownNumber{
+  animation: 1s numberscale ease-out infinite;
+}
+.hide .countdownNumber,
+.hide .path {
+  opacity: 0 !important;
+  animation: none;
+}
+
+.countdownNumber{  
+    text-align: center;
+    font-size: 8rem;
+    line-height: 11rem;
+    font-weight: bold;
+    color: white;
+    margin:0;
+}
+
+
+.countdownContainer{
+    position: relative;
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    border: 6px solid transparent;
+    box-sizing:border-box;
+}
+
+
+.hide{
+  opacity: 0;
+  transition: opacity 0.3s ease-out 0s;
+}
+
+/* -------------------
+ Existing css classes
+------------------- */
+.center {
+  display: flex;;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+}
+
+.full-width-height { 
+  position: absolute; left: 0; top: 0; right: 0; bottom: 0; 
+}
+
+.loading-spinner {
+	margin: auto;
+    border: 3px solid #244e9e;
+    border-radius: 100%;
+    border-left-color:#355da9;
+    border-bottom-color: #5e7cb4;
+    border-right-color: transparent;
+    animation: spinner 1.3s infinite linear;
+}
+
+.size-xlarge {
+    height: 500px;
+    width: 500px;
+}
+
+@keyframes spinner {
+    100% {
+        transform: rotate(360deg);
+    }
+}

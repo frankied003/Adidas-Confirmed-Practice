@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app='app' ng-controller='MyCtrl'>
+<head>
+	<title>	Adidas Confirmed Practice</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="AdidasConfirmedPractice.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Avant+Garde+Gothic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-touch.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <a id="adidasLogo" href="#"><img src="https://seeklogo.com/images/A/adidas-logo-49D5BEBA90-seeklogo.com.png" width="70px" height="70px"></a>
+  <span><h1>CONFIRMED</h1></span>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a href="https://www.adidas.com/us/confirmed/" target="_blank">It's Game Time</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- animation -->
+  <div countdown-number>
+    <!-- countdown -->
+    <div class="full-width-height center">
+      <div class="countdownContainer">
+        <p class="countdownNumber">{{duration}}</p>
+      </div>
+    </div>
+    <!-- spinner -->
+    <div class="full-width-height center">
+      <svg class="circular" height="100" width="100">
+      <circle class="path" cx="100" cy="100" r="93px" fill="none" stroke-width="7" stroke-miterlimit="10" />
+      </svg>  
+    </div>  
+  </div>
+
+<div id="main-captcha" style="display: none">
+	<div id="main-captcha-instructions">
+		<h2 id="instruction-text">Select the image<span>...</span></h2>
+		<div id="container">
+			<div class="captcha-image"><img src="#" height="144px" width="144px" onclick="correctImageCalc()"></div>
+			<div class="captcha-image"><img src="#" height="144px" width="144px" onclick="correctImageCalc()"></div>
+			<div class="captcha-image"><img src="#" height="144px" width="144px" onclick="correctImageCalc()"></div>
+			<div class="captcha-image"><img src="#" height="144px" width="144px" onclick="correctImageCalc()"></div>
+			<div class="captcha-image"><img src="#" height="144px" width="144px" onclick="correctImageCalc()"></div>
+			<div class="captcha-image"><img src="#" height="144px" width="144px" onclick="correctImageCalc()"></div>
+			<div class="captcha-image"><img src="#" height="144px" width="144px" onclick="correctImageCalc()"></div>
+			<div class="captcha-image"><img src="#" height="144px" width="144px" onclick="correctImageCalc()"></div>
+			<div class="captcha-image"><img src="#" height="144px" width="144px" onclick="correctImageCalc()"></div>			
+		</div>
+	</div>
+</div>
+
+<div class="loading-spinner size-xlarge" style="display: none;"></div>
+<div id="wrongImage" class="drawingResult" style="display: none;">
+	<h1>WRONG IMAGE SELECTED...</h1>
+  <div class="bottom">
+    <h3 class = "timer"></h3>
+    <button type="button" class="btn btn-light" value="Refresh Page" onClick="window.location.reload()">Retry</button>
+  </div>
+</div>
+<div id="confirmedPage" class="drawingResult" style="display: none">
+	<h1>YOU ARE CONFIRMED!</h1>
+  <div class="bottom">
+    <h3 class = "timer"></h3>
+    <button type="button" class="btn btn-light" value="Refresh Page" onClick="window.location.reload()">Retry</button>
+  </div>
+</div>
+<div id="nonConfirmedPage" class="drawingResult" style="display: none">
+  <h1>ALL RESERVATIONS HAVE BEEN MADE <br> <span>TRY AGAIN NEXT TIME</span></h1>
+  <div class="bottom">
+    <h3 class = "timer"></h3>
+    <button type="button" class="btn btn-light" value="Refresh Page" onClick="window.location.reload()">Retry</button>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="AdidasConfirmedPractice.js"></script>
+</body>
+</html>
